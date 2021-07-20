@@ -6,7 +6,7 @@ function LeftSidebar() {
         
         
         <div
-            className={`h-screen fixed  md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
+            className={`invisible md:visible h-screen fixed  md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
         >
             <div className="  ">
                 <a
@@ -15,7 +15,7 @@ function LeftSidebar() {
                     rel="noreferrer"
                     className="mt-2 text-center w-full inline-block"
                 >
-                    <H6 className="" color="gray"><Icon name="account_circle" size="3xl" />User Profile</H6>
+                    <H6 className="" color="gray"><Icon name="account_circle" size="3xl" color="blue" />User Profile</H6>
                 </a>
             </div>
             <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
@@ -30,7 +30,7 @@ function LeftSidebar() {
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
                                 >
-                                    <Icon name="fingerprint" size="2xl" />
+                                    <Icon name="email" size="2xl"  color="blue"/>
                                     Email
                                 </a>
                             </li>
@@ -41,7 +41,7 @@ function LeftSidebar() {
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
                                 >
-                                    <Icon name="list_alt" size="2xl" />
+                                    <Icon name="add_circle" size="2xl" color="blue" />
                                     Compose
                                 </a>
                             </li>
@@ -52,7 +52,7 @@ function LeftSidebar() {
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
                                 >
-                                    <Icon name="web" size="2xl" />
+                                    <Icon name="inbox" size="2xl" color="blue" />
                                     Inbox
                                 </a>
                             </li>
@@ -63,7 +63,7 @@ function LeftSidebar() {
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
                                 >
-                                    <Icon name="web" size="2xl" />
+                                    <Icon name="send" size="2xl" color="blue" />
                                     Sent
                                 </a>
                             </li>
@@ -74,7 +74,7 @@ function LeftSidebar() {
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
                                 >
-                                    <Icon name="web" size="2xl" />
+                                    <Icon name="forum" size="2xl" color="blue" />
                                     Group Chat
                                 </a>
                             </li>
@@ -85,7 +85,7 @@ function LeftSidebar() {
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
                                 >
-                                    <Icon name="web" size="2xl" />
+                                    <Icon name="today" size="2xl" color="blue" />
                                     Calendar
                                 </a>
                             </li>

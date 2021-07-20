@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/navigation/Header'
 import LeftSidebar from "../components/navigation/LeftSidebar";
+import MainSection from '../components/navigation/MainSection';
 export default function Home() {
   return (
     <div >
@@ -10,7 +11,14 @@ export default function Home() {
       </Head>
       
       <Header/>
-      <LeftSidebar/>
+      <div className="flex flex-row  justify-between bg-gray-100">
+        <LeftSidebar/>
+        <div>hello world</div>
+        <MainSection/>
+        <div>hello world</div>
+        
+      </div>
+      
     </div>
   )
 }
