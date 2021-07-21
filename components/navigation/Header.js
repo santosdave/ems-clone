@@ -109,8 +109,8 @@ function Header() {
             <img 
             onClick={()=>setShowModal(true)}
             loading="lazy"
-            className="cursor-pointer h-12 w-12 rounded-full ml-2"
-            /* src={session?.user?.image} */
+            className="cursor-pointer h-14 w-14 rounded-full ml-2"
+            src={"https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"}
             alt=""
             />
             {modal}
