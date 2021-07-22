@@ -110,7 +110,7 @@ function Header() {
             onClick={()=>setShowModal(true)}
             loading="lazy"
             className="cursor-pointer h-14 w-14 rounded-full ml-2"
-            src={"https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"}
+            src={"https://media-exp3.licdn.com/dms/image/C4D03AQFaYwtIZ5k53g/profile-displayphoto-shrink_800_800/0/1622195469007?e=1632355200&v=beta&t=24cvGNubyys3-JrSg5kB9FYqbRV4dOeGOH5T5MmdD-0"}
             alt=""
             />
             {modal}

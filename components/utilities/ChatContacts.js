@@ -1,5 +1,5 @@
 import ChatAvatar from "../utilities/ChatAvatar";
-function ChatContacts({src, status,name}) {
+function ChatContacts({id,src, status,name}) {
     return (
         <div className="flex sticky  items-center pl-5 py-4 pr-3 hover:bg-gray-400 cursor-pointer rounded-xl ">
             <ChatAvatar src={src} status={status} />
