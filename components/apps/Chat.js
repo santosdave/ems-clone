@@ -259,13 +259,13 @@ function Chat({ togglePopup }) {
                 },
             ])
         }
-        // getChatRoomByContactId(currentUserId, "323sa680b3249760ea21rt47").then(
+        /* // getChatRoomByContactId(currentUserId, "323sa680b3249760ea21rt47").then(
         //   ({ data }) => {
         //     if (isAlive) {
         //       setMessageList(data?.messageList);
         //     }
         //   }
-        // );
+        // ); */
     }, [isAlive])
     useEffect(() => {
         scrollToBottom()
@@ -274,7 +274,7 @@ function Chat({ togglePopup }) {
     return (
         <div className="flex justify-evenly h-full">
             
-            <div className="flex-grow flex-col w-64  py-5 h-full  items-center ">
+            <div className="invisible md:visible  flex-grow flex-col w-64  py-5 h-full  items-center ">
             {contacts.filter(item =>item.contactId == currentUserId).map(filteredItem=>(
                 <div className="flex sticky top-20 z-50 justify-evenly items-center pl-5 py-3 pr-3 bg-blue-600 rounded-sm">
                 
@@ -288,7 +288,7 @@ function Chat({ togglePopup }) {
                 
                 </div>
             ))}
-                <div className="`invisible md:visible  h-screen   overflow-y-auto  flex-nowrap overflow-hidden w-64  shadow-xl bg-white  z-10 py-4 px-6 transition-all duration-300`">
+                <div className="` h-screen   overflow-y-auto  flex-nowrap overflow-hidden w-64  shadow-xl bg-white  z-10 py-4 px-6 transition-all duration-300`">
                 {contacts.map((item) => (    
                     <div className=" flex-col items-stretch  flex-nowrap   relative ">
                         {currentUserId !== item.contactId && (
@@ -415,22 +415,24 @@ function Chat({ togglePopup }) {
                 ))}
                     
                 </ScrollBar>
-                
+                <Divider className={"bg-gray-400 py-1"} />
                 <div className="flex-grow flex-col py-1 sticky  z-50 items-center">
-                    <Divider className={"bg-gray-400 py-1"} />
+                    
+                
+                    
                     <TextField
-                        style={{}}
-                        variant="outlined"   
-                        
-                        
-                        rowsMax={1}
-                        className="flex-grow flex-col   py-5 h-full  items-center"
-                        label="Type here ..."
-                        InputProps={{
-                            disableUnderline: false,
-                            shrink: true,
-                            endAdornment: (
-                                <div className="flex justify-center w-full">
+                            style={{}}
+                            variant="outlined"   
+                            
+                            fullWidth
+                            rowsMax={1}
+                            className="flex-grow flex-row   py-5 h-full  items-center"
+                            label="Type here ..."
+                            InputProps={{
+                                disableUnderline: false,
+                                shrink: true,
+                                endAdornment: (
+                                    <div className="flex justify-end w-full">
                                     <Button
                                         color="blue"
                                         buttonType="outline"
@@ -462,13 +464,15 @@ function Chat({ togglePopup }) {
                                         <Icon name="send" size="2xl" color="blue"/>
                                     </Button>
                                 </div>
-                            ),
-                            
-                        }}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        onKeyUp={sendMessageOnEnter}
-                    />
+                                ),
+                                
+                            }}
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            onKeyUp={sendMessageOnEnter}
+                        />
+                    
+                    
             
                 </div>
             </div>

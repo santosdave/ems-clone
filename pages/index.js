@@ -15,7 +15,7 @@ export default function Home() {
         <LeftSidebar/>
         <div>hello world</div>
         <MainSection/>
-        <div>hello world</div>
+        
         
       </div>
       
