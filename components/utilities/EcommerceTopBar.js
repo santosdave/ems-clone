@@ -15,8 +15,8 @@ import clsx from 'clsx';
 function EcommerceTopBar() {
     const buttonRef = useRef();
     return (
-        <div className=" top-20 z-50 sticky transition-all mt-6 duration-500 ease-in-out shadow-md">
-            <div className="flex-grow bg-white px-16 md:px-18  rounded-xl ">
+        <div className=" top-20 z-50 sticky transition-all mt-6 ml-3 duration-500 ease-in-out shadow-md">
+            <div className="flex-grow bg-white justify-between items-center px-16 md:px-18  rounded-xl ">
                 <div className="  h-full py-3">
                     <div className="flex justify-between items-center">
                         <IconButton
@@ -58,7 +58,7 @@ function EcommerceTopBar() {
                                 <span>
                                     Hi <strong>{"Santos Dave"}</strong>
                                 </span>
-                                <Avatar className=" ml-2  mr-2 cursor-pointer" src='https://media-exp3.licdn.com/dms/image/C4D03AQFaYwtIZ5k53g/profile-displayphoto-shrink_800_800/0/1622195469007?e=1632355200&v=beta&t=24cvGNubyys3-JrSg5kB9FYqbRV4dOeGOH5T5MmdD-0'/>
+                                <Avatar className=" invisible md:visible ml-2  mr-2 cursor-pointer" src='https://media-exp3.licdn.com/dms/image/C4D03AQFaYwtIZ5k53g/profile-displayphoto-shrink_800_800/0/1622195469007?e=1632355200&v=beta&t=24cvGNubyys3-JrSg5kB9FYqbRV4dOeGOH5T5MmdD-0'/>
                                 <IconButton ref={buttonRef}>
                                     <Icon>more_vert</Icon>
                                 </IconButton>

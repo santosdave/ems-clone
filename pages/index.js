@@ -12,9 +12,15 @@ export default function Home() {
       
       <Header/>
       <div className="flex flex-row  justify-between bg-gray-100">
-        <LeftSidebar/>
-        <div>hello world</div>
-        <MainSection/>
+        <div>
+          <LeftSidebar/>
+        </div>
+        <div>
+          <MainSection/>
+        </div>
+        
+        {/* <div>hello world</div> */}
+        
         
         
       </div>

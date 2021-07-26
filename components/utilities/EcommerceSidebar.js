@@ -14,7 +14,7 @@ function EcommerceSidebar() {
         return `$ ${sliderValue}`
     }
     return (
-        <div classname="flex-col">
+        <div classname=" flex-col ">
             <div className="flex flex-grow items-center mb-3 bg-white rounded-xl border-xl focus-within:shadow-md " >
                 <Button
                     color="blue"
@@ -70,7 +70,7 @@ function EcommerceSidebar() {
             <Card className="px-6 py-4 mb-6">
                 <div className="flex  items-center justify-between">
                     <h5 className="card-title"><b>Slider</b></h5>
-                    <p>Ksh0 - Ksh({sliderValue})</p>
+                    <p>Ksh(0 - {sliderValue})</p>
                 </div>
                 
                 <Slider
@@ -269,7 +269,7 @@ function EcommerceSidebar() {
                            /*  checked={state.gilad}
                             onChange={handleChange('gilad')} */
                             value="gilad"
-                            size="lg"
+                            
                         />
             </Card>
             <Button className="px-6 py-4 mb-6 place-content-center ml-auto mr-auto">

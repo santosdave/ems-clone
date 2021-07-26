@@ -5,7 +5,7 @@ import Callendar from "../apps/Callendar"
 import Ecommerce from "../apps/Ecommerce"
 function Main() {
     return (
-        <div>
+        <div className="container justify-between">
             {/* <Email/> */}
             {/* <RichTextEditor/> */}
             {/* <Chat/> */}
