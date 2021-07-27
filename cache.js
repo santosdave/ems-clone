@@ -1,0 +1,1 @@
+/* grid grid-flow-row auto-rows-min md:auto-rows-max grid-cols-1 grid-rows-7 md:grid-flow-row md:grid-cols-3 gap-5A */

@@ -6,7 +6,7 @@ function LeftSidebar() {
         
         
         <div
-            className={`invisible md:visible h-screen absolute md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
+            className={`invisible md:visible h-screen fixed md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
         >
             <div className="  ">
                 <a

@@ -8,18 +8,18 @@ import Icon from "@material-tailwind/react/Icon";
 import Paragraph from "@material-tailwind/react/Paragraph";
 import Button from "@material-tailwind/react/Button";
 import { Rating } from '@material-ui/lab'
-function EcommerceProduct({src,name,price,ratings,amount}) {
+function EcommerceProduct({id,src,title,price,rating,amount}) {
     return (
-        <div className="overflow-hidden rounded-lg shadow-lg ">
+        <div className="overflow-hidden rounded-lg shadow-lg  ">
                                 <div>
                                     <a href="#">
-                                        <img width={250} height={250} className="" src={src} alt="Hp Laptop"/>
+                                        <img width={250} height={100} className="object-contain h-48 " src={src} alt={title}/>
                                     </a>
                                 </div>
                                 <header className="leading-tight p-2 md:p-4">
                                     <h1 className="text-lg">
-                                        <a className="no-underline hover:underline text-black" href="#">
-                                            {name}
+                                        <a className="no-underline hover:underline text-black truncate" href="#">
+                                            {title}
                                         </a>
                                     </h1>
                                 </header>
@@ -29,7 +29,7 @@ function EcommerceProduct({src,name,price,ratings,amount}) {
                                         </p>
                                 </div>
                                 <div className="flex items-center py-1 justify-start leading-none p-2 md:p-4">
-                                    <Rating readOnly={true} value={ratings} />
+                                    <Rating readOnly={true} value={rating} />
                                     <p className="bg-gray-300 ml-4 text-sm">{amount}</p>
                                 </div>
                                 <div className="flex items-center justify-between leading-none p-2 md:p-4">

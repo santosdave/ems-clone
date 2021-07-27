@@ -15,7 +15,7 @@ import clsx from 'clsx';
 function EcommerceTopBar() {
     const buttonRef = useRef();
     return (
-        <div className=" top-20 z-50 sticky transition-all mt-6 ml-3 duration-500 ease-in-out shadow-md">
+        <div className=" flex sticky top-20 z-50 transition-all mt-6 ml-3 duration-500 ease-in-out shadow-md">
             <div className="flex-grow bg-white justify-between items-center px-16 md:px-18  rounded-xl ">
                 <div className="  h-full py-3">
                     <div className="flex justify-between items-center">
@@ -46,7 +46,10 @@ function EcommerceTopBar() {
                                 <input type="text" placeholder="Search here..." autofocus/>
                             </div>
                             <IconButton>
+                                <div className="">
                                 <Icon>notificationsIcon</Icon>
+                                
+                                </div>
                             </IconButton>
                             <IconButton>
                                 <Icon>shopping_cartIcon</Icon>
