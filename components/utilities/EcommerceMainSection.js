@@ -249,19 +249,35 @@ const EcommerceDB = {
             list: [
                 {
                     productId: '323sa680b32497dsfdsgga21rt47',
-                    amount: 1,
+                    quantity: 1,
+                    src: 'https://m.media-amazon.com/images/I/81F+gzLiCvS._AC_UY218_.jpg',
+                    price: 324.0,
+                    title: 'Bass Speaker Venue 8 ',
+
                 },
                 {
                     productId: '323sa680b324976dfgga21rt47',
-                    amount: 1,
+                    quantity: 1,
+                    src: 'https://m.media-amazon.com/images/I/81ayiXd8eHL._AC_UY218_.jpg',
+                    price: 454.0,
+                    amount: 100,
+                    title: 'Bass Speaker',
                 },
                 {
                     productId: '323sa680bdf4976dfgga21rt4',
-                    amount: 1,
+                    quantity: 1,
+                    src: 'https://m.media-amazon.com/images/I/71R1nO2uW0L._AC_UY218_.jpg',
+                    price: 134.0,
+                    amount: 100,
+                    title: 'Bass Speaker',
                 },
                 {
                     productId: '333sa680bdf4976dfgga21rt4',
-                    amount: 1,
+                    quantity: 1,
+                    src: 'https://m.media-amazon.com/images/I/81UV6zskWhL._AC_UY218_.jpg',
+                    price: 987.0,
+                    amount: 100,
+                    title: 'Bit Bass Headphone',
                 },
             ],
         },
@@ -288,7 +304,7 @@ const EcommerceDB = {
 function EcommerceMainSection() {
     const [anchorEl, setAnchorEl]=useState(null)
     const [selectedIndex, setSelectedIndex]= useState(0)
-    const shipping="true"
+    let cartList = EcommerceDB.cart[0].list
     const handleClickListItem=(e)=>{
         setAnchorEl(e.currentTarget)
     }

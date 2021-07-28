@@ -18,7 +18,7 @@ function EcommerceProduct({id,src,title,price,rating,amount}) {
                                 </div>
                                 <header className="leading-tight p-2 md:p-4">
                                     <h1 className="text-lg">
-                                        <a className="no-underline hover:underline text-black truncate" href="#">
+                                        <a className="no-underline hover:underline text-black break-words truncate" href="#">
                                             {title}
                                         </a>
                                     </h1>

@@ -4,6 +4,7 @@ import {
     IconButton,
     MenuItem,
     Avatar,
+    Badge,
     useMediaQuery,
     Hidden,
 } from '@material-ui/core';
@@ -12,8 +13,12 @@ import Popover from "@material-tailwind/react/Popover";
 import PopoverContainer from "@material-tailwind/react/PopoverContainer";
 import PopoverBody from "@material-tailwind/react/PopoverBody";
 import clsx from 'clsx';
+import ShoppingCart from './ShoppingCart';
+import NotificationBar from './NotificationBar';
+
 function EcommerceTopBar() {
     const buttonRef = useRef();
+    
     return (
         <div className=" flex sticky top-20 z-50 transition-all mt-6 ml-3 duration-500 ease-in-out shadow-md">
             <div className="flex-grow bg-white justify-between items-center px-16 md:px-18  rounded-xl ">
@@ -45,16 +50,9 @@ function EcommerceTopBar() {
                                 </IconButton>
                                 <input type="text" placeholder="Search here..." autofocus/>
                             </div>
-                            <IconButton>
-                                <div className="">
-                                <Icon>notificationsIcon</Icon>
-                                
-                                </div>
-                            </IconButton>
-                            <IconButton>
-                                <Icon>shopping_cartIcon</Icon>
-                            </IconButton>
-                            
+                            <NotificationBar/>
+                            <ShoppingCart />
+                         
                         </div>
                         <div className="flex items-center hover:bg-gray-200 rounded-full p-1" >
                             
