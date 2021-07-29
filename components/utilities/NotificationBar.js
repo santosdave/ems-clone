@@ -44,9 +44,11 @@ const NotificationDB = {
 function NotificationBar({container}) {
     let notificationList=NotificationDB.list
     const [panelOpen, setPanelOpen]= useState(false)
+    
     const handleDrawerToggle = () => {
         setPanelOpen(!panelOpen)
     }
+    
     return (
         <Fragment>
             <IconButton onClick={handleDrawerToggle}>
@@ -72,13 +74,60 @@ function NotificationBar({container}) {
                             <h5 className="ml-2 my-0 font-medium">Notifications</h5>
                         </header>
                         <div className="relative">
-                            <Card className="px-6 py-4 mb-6 mx-4" elevation={3}>
-                                <div className="flex items-center justify-between p-2 bg-gray-200">
+                        {notificationList.map((notification)=>(
+                            <Card key={notification.id} className="px-6 py-4 mb-6 mx-4 transition duration-300 ease  hover:bg-gray-100 transform hover:-translate-y-1 hover:scale-110 ..." elevation={3}>
+                                <div className="flex items-center  p-2 bg-gray-200">
+                                    <div className="flex items-center justify-between">
+                                        <div className=" flex flex-start items-center justify-between h-7 w-24 overflow-hidden">
+                                            <Icon
+                                             className=""
+                                             fontSize="small"
+                                             color={notification.icon.color}
+                                            >
+                                             {notification.icon.name}
+                                            </Icon>
+                                            <span className="ml-2 font-semibold text-gray-400">
+                                               {notification.heading}
+                                            </span>
+                                        </div>
+                                        <div className="flex flex-end items-center">
+                                            <small className="ml-3 text-gray-400">
+                                                3 Days ago
+                                            </small>
+                                            <IconButton  size="small">
+                                                <Icon className="ml-2 cursor-pointer">
+                                                    clear
+                                                </Icon>
+                                            </IconButton> 
+                                        </div>
+                                        
 
+                                    </div>
                                 </div>
+                               
+                                <div className="px-4 pt-2 pb-4">
+                                    <p className="m-0 font-3px text-sm"> {notification.title}</p>
+                                </div>
+                                <small className="px-4 text-gray-400 break-words truncate">
+                                    {notification.subtitle}
+                                </small>
                             </Card>
+                            ))}
 
                         </div>
+                        {!!notificationList?.length && (
+                            <div className="text-center">
+                                <Button /* onClick={clearNotifications} */
+                                 className="mt-7 w-full border-radius-0"
+                                 variant="contained"
+                                 color="primary"
+                            
+                                >
+                                    Clear Notifications
+                                </Button>
+                               
+                            </div>
+                        )}
                     </div>
 
                 </Drawer>

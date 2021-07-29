@@ -394,7 +394,7 @@ function EcommerceMainSection() {
                     </div>
                     
                 </div>
-                <footer className="container my-12 mx-auto px-4 md:px-12">
+                <footer className="container my-12 mx-auto  px-4 md:px-12">
                     <Pagination>
                         <PaginationItem href="#last" ripple="dark">
                             <Icon name="keyboard_arrow_left" />

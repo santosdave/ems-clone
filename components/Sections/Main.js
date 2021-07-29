@@ -3,6 +3,8 @@ import Chat from "../apps/Chat"
 import RichTextEditor from "../utilities/RichTextEditor"
 import Callendar from "../apps/Callendar"
 import Ecommerce from "../apps/Ecommerce"
+import Staff from "../apps/Staff"
+import Customer from "../apps/Customer"
 function Main() {
     return (
         <div className="container justify-between">
@@ -10,7 +12,9 @@ function Main() {
             {/* <RichTextEditor/> */}
             {/* <Chat/> */}
             {/* <Callendar/> */}
-            <Ecommerce/>
+            {/* <Ecommerce/> */}
+            {/* <Staff/> */}
+            <Customer/>
         </div>
     )
 }
