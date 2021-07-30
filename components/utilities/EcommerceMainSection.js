@@ -388,7 +388,7 @@ function EcommerceMainSection() {
                     
                     <div className="grid items-center grid-flow-row auto-rows-min md:auto-rows-max grid-cols-1 grid-rows-7 md:grid-flow-row md:grid-cols-3 gap-3 -mx-1 lg:-mx-4">
                     {productList.map((product) => ( 
-                         <EcommerceProduct key={product.id} id={product.id} src={product.src} title={product.title} price={product.price} rating={product.rating} amount={product.amount}/>
+                         <EcommerceProduct key={product.id} id={product.id} description={product.description} src={product.src} title={product.title} price={product.price} rating={product.rating} amount={product.amount} brand={product.brand} category={product.category}/>
                       
                     ))}
                     </div>

@@ -11,81 +11,32 @@ import {
 } from '@material-ui/core';
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
-import Dialog from '@material-ui/core/Dialog'
-import Slide from '@material-ui/core/Slide'
-import Divider from '@material-ui/core/Divider'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import { makeStyles } from '@material-ui/core/styles';
-const useStyles = makeStyles((theme) => ({
-    form: {
-      display: 'flex',
-      flexDirection: 'column',
-      margin: 'auto',
-      width: 'fit-content',
-    },
-    formControl: {
-      marginTop: theme.spacing(2),
-      minWidth: 120,
-    },
-    formControlLabel: {
-      marginTop: theme.spacing(1),
-    },
-  }));
-const customerList = [
+const supplierList = [
     {
-        id: 'bhu54886huyyrhjkjkgnu',
-        type: 'individual',
+        id: 'bhu54886668888jkjkgnu',
         src: 'https://m.media-amazon.com/images/I/',
         phoneNumber:"0787654321",
         name: 'Wycliffe Odhiambo',
         email: 'Santosdave@gmail.com',
-        primaryContact: {
-            salutation: 'Mr.',
-            firstName: 'Peter',
-            secondName: 'Olwa',
-        },
-        emailStatus: {
-            status: 'Verified',
-            color: 'primary',
-        },
         streetAddress: 'ruiru',
-        website: 'ruiru',
-        company: 'Dairy ltd',
+        postCode: '0 0232',
         designation: "IT Technician",
         department: 'ICT',
         city: 'Kiambu',
-        balance: 5000,
-        currency: 'Ksh',
-        paymentTerms: 'Due on receive',
         country: 'Kenya',
         
     },
     {
-        id: 'bhu54886huyyrghhukjkgnu',
-        type: 'individual',
+        id: 'bhu54886668888jff5gnu',
         src: 'https://m.media-amazon.com/images/I/',
         phoneNumber:"0787654321",
         name: 'Beatrice Wanjiku',
         email: 'Beatrice@gmail.com',
-        primaryContact: {
-            salutation: 'Mr.',
-            firstName: 'Peter',
-            secondName: 'Olwa',
-        },
-        emailStatus: {
-            status: 'Verified',
-            color: 'primary',
-        },
         streetAddress: 'kitengela',
-        website: 'ruiru',
-        company: 'Safco ltd',
-        designation: "IT Technician",
-        department: 'ICT',
+        postCode: '0 0232',
+        designation: "Product manager",
+        department: 'Marketing',
         city: 'Kitengela',
-        balance: 9500,
-        currency: 'Ksh',
-        paymentTerms: 'Due on receive',
         country: 'Kenya',
     },
     {
@@ -180,18 +131,9 @@ const customerList = [
         country: 'Kenya',
     },
 ]
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />
-})
-function CustomerList() {
+function SupplierList() {
     const[rowsPerPage, setRowsPerPage]= useState(5);
     const [page , setPage] = useState(0)
-    const [dialogOpen, setDialogOpen]=useState(false);
-    const handleDialogToggle=()=>{
-        setDialogOpen(!dialogOpen)
-    }
-    
-    
     const handleChangePage=(e,newPage) => {
         setPage(newPage)
     }
@@ -199,12 +141,11 @@ function CustomerList() {
         setRowsPerPage(+e.target.value)
         setPage(0)
     }
-
     return (
         <div className=" flex-grow w-full bg-white overflow-auto">
-            <Table className="whitespace-pre">
-                <TableHead>
-                    <TableRow>
+        <Table className="whitespace-pre">
+            <TableHead>
+                <TableRow>
                         <TableCell className="px-0"><input size="lg" type="checkbox"/></TableCell>
                         <TableCell className="px-0">Name</TableCell>
                         <TableCell className="px-0 ">Address</TableCell>
@@ -212,12 +153,12 @@ function CustomerList() {
                         <TableCell className="px-0">Company</TableCell>
                         <TableCell className="px-0">Balance(Ksh)</TableCell>
                         <TableCell className="px-0">Action</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {customerList.slice(page *rowsPerPage, page * rowsPerPage + rowsPerPage).
-                    map((staff)=>(
-                        <TableRow key={staff.id} >
+                </TableRow>
+            </TableHead>
+            <TableBody>
+                {supplierList.slice(page *rowsPerPage, page * rowsPerPage + rowsPerPage).
+                map((staff)=>(
+                    <TableRow key={staff.id} >
                                 <TableCell
                                     className="px-0 capitalize"
                                     align="left"
@@ -270,7 +211,6 @@ function CustomerList() {
                                         </Button>
                                         <Button
                                             color="gray"
-                                            onClick={handleDialogToggle}
                                             buttonType="outline"
                                             rounded={true}
                                             iconOnly={true}
@@ -294,55 +234,27 @@ function CustomerList() {
                                 
                                 </TableCell>
                             </TableRow>
-                        ))}
-                </TableBody>
-            </Table>
-            <TablePagination
-                className="px-4"
-                rowsPerPageOptions={[5, 10, 25]}
-                component="div"
-                count={15}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                backIconButtonProps={{
-                    'aria-label': 'Previous Page',
-                }}
-                nextIconButtonProps={{
-                    'aria-label': 'Next Page',
-                }}
-                onChangePage={handleChangePage}
-                onChangeRowsPerPage={handleChangeRowsPerPage}
-            /> 
-            <Dialog
-                
-                open={dialogOpen}
-                onClose={handleDialogToggle}
-                TransitionComponent={Transition}
-            >
-                <AppBar className=" flex items-center justify-start relative">
-                    <Toolbar>
-                        <Button
-                            color="blue"
-                            onClick={handleDialogToggle}
-                            buttonType="outline"
-                            rounded={true}
-                            iconOnly={true}
-                            ripple={"dark"}
-                            className=" md:inline-flex h-15 w-10 border-0"
-                        >
-                            <Icon name="close" size="3xl"/>
-                        </Button>
-                        <h2 variant="h6" className="">
-                            Sound
-                        </h2>
-                        <Button color="inherit" onClick={handleDialogToggle}>
-                            save
-                        </Button>
-                    </Toolbar>
-                </AppBar>
-            </Dialog>  
-        </div>
-    )
+                    ))}
+            </TableBody>
+        </Table>
+        <TablePagination
+            className="px-4"
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={15}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            backIconButtonProps={{
+                'aria-label': 'Previous Page',
+            }}
+            nextIconButtonProps={{
+                'aria-label': 'Next Page',
+            }}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+        />   
+    </div>
+)
 }
 
-export default CustomerList
+export default SupplierList

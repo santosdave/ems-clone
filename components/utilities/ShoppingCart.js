@@ -171,7 +171,7 @@ function ShoppingCart({container,cart,id ,title,price,quantity}) {
                         </header>
                         <div className="flex-grow overflow-auto">
                         {cartList.map((product) => (
-                            <div key={product.ProductId}className=" flex items-center mb-1 py-2 px-2 transition duration-300 ease bg-blue-200 hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-100 ...">
+                            <div key={product.ProductId}className=" flex items-center mb-1 py-2 px-2 transition duration-300 ease bg-gray-300 hover:bg-blue-200 transform hover:-translate-y-1 hover:scale-100 ...">
                                 <div className="flex flex-col items-center mr-1">
                                     <IconButton  size="small" /* onClick={handleDrawerToggle} */>
                                             <Icon className="cursor-pointer">
