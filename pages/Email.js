@@ -1,6 +1,6 @@
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
-import SingleEmail from "./SingleEmail";
+import SingleEmail from "../components/apps/SingleEmail";
 function Email() {
     return (
         <div className="flex-grow flex-row py-5 ">

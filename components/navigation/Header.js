@@ -8,9 +8,12 @@ import Modalfooter from "@material-tailwind/react/Modalfooter";
 import Dropdown from "@material-tailwind/react/Dropdown"
 import DropdownItem from "@material-tailwind/react/DropdownItem"
 import DropdownLink from "@material-tailwind/react/DropdownLink"
+
+import { createMemoryHistory } from 'history';
 function Header() {
     /* const [session]=useSession(); */
     const [showModal, setShowModal]= useState(false)
+    const history = createMemoryHistory();
     const modal=(
         <Modal
         size="sm"
@@ -64,20 +67,20 @@ function Header() {
             block={false}
             ripple="light"
         >
-                <DropdownItem color="lightBlue" ripple="light">
-                    Action
-                </DropdownItem>
-                <DropdownLink
-                    href="#"
-                    color={"gray"}
-                    ripple="light"
-                    onClick={(e) => e.preventDefault()}
-                >
-                    Another Action
-                </DropdownLink>
-                <DropdownItem color="lightBlue" ripple="light">
-                    Something else
-                </DropdownItem>
+            
+                <Link to="/">
+                    <DropdownItem color="lightBlue" ripple="light">
+                        Home
+                    </DropdownItem>
+                </Link>
+                
+                <Link to="/ecommerce">
+                    <DropdownItem color="lightBlue" ripple="light">
+                        Ecommerce
+                    </DropdownItem>
+                </Link>
+           
+                
         </Dropdown>
            
             <img className="cursor-pointer h-12 w-35 rounded-lg ml-2 " alt="" loading="lazy" src="https://widetechnologies.co.ke/wp/wp-content/uploads/2021/06/wtl0go4b_white.png"/>

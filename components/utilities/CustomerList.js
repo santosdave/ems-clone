@@ -17,6 +17,7 @@ import Divider from '@material-ui/core/Divider'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { makeStyles } from '@material-ui/core/styles';
+import ViewCustomer from './ViewCustomer';
 const useStyles = makeStyles((theme) => ({
     form: {
       display: 'flex',
@@ -340,6 +341,7 @@ function CustomerList() {
                         </Button>
                     </Toolbar>
                 </AppBar>
+                <ViewCustomer/>
             </Dialog>  
         </div>
     )

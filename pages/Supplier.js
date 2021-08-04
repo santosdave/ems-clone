@@ -1,14 +1,14 @@
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
-import ProductList from "../utilities/ProductList";
-function Product() {
+import SupplierList from "../components/utilities/SupplierList";
+function Supplier() {
     return (
         <div className="flex-grow container flex-row py-5 px-7">
             <div className="flex-col">
                 
                 <div className=" flex sticky top-20 z-50 w-auto bg-white py-2 px-4 justify-between items-center  shadow-md rounded-md">
                     <header>
-                        <h2 className="text-2xl font-semibold">All Products</h2>
+                        <h2 className="text-2xl font-semibold">All Supplier</h2>
                     </header>
                     <div className="flex items-center flex-end">
                     <Button
@@ -74,11 +74,11 @@ function Product() {
                     </div>
                 </div>
                 <div>
-                    <ProductList/>
+                    <SupplierList/>
                 </div>
             </div>    
         </div>
     )
 }
 
-export default Product
+export default Supplier

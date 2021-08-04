@@ -1,6 +1,9 @@
 import Icon from '@material-tailwind/react/Icon';
 import H6 from '@material-tailwind/react/Heading6';
+import { Link, Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
 function LeftSidebar() {
+   const history = createMemoryHistory();
     return (
         <>
         
@@ -22,21 +25,25 @@ function LeftSidebar() {
                 
                 <div className="flex flex-col">
                     < H6 color="gray">Main</H6>
+                <Router history={history}>
                     <ul className="flex-col min-w-full flex list-none">
-                        <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
-                                <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/login"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center gap-4 text-sm font-semibold py-3"
-                                >
-                                    <Icon name="email" size="2xl"  color="blue"/>
-                                    Email
-                                </a>
+                        <Link  to="/">
+                            <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
+                                    <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="flex items-center gap-4 text-sm font-semibold py-3"
+                                    >
+                                        <Icon name="email" size="2xl"  color="blue"/>
+                                        Email
+                                    </a>
                             </li>
+                        </Link>
+                            
+                            {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/register"
+                                    href="#"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
@@ -45,6 +52,7 @@ function LeftSidebar() {
                                     Compose
                                 </a>
                             </li>
+                            {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -56,6 +64,7 @@ function LeftSidebar() {
                                     Inbox
                                 </a>
                             </li>
+                            {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -67,20 +76,24 @@ function LeftSidebar() {
                                     Sent
                                 </a>
                             </li>
+                        <Link to="/chat">
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
-                                <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center gap-4 text-sm font-semibold py-3"
-                                >
-                                    <Icon name="forum" size="2xl" color="blue" />
-                                    Group Chat
-                                </a>
+                                    <a
+                                        
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="flex items-center gap-4 text-sm font-semibold py-3"
+                                    >
+                                        <Icon name="forum" size="2xl" color="blue" />
+                                        Group Chat
+                                    </a>
                             </li>
+                        </Link>
+                            
+                            {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
+                                    
                                     target="_blank"
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
@@ -94,7 +107,7 @@ function LeftSidebar() {
                     < H6 color="gray">Staff</H6>
                     <ul className="flex-col min-w-full flex list-none">
                         
-                        
+                    {/* <Link></Link> */}
                         <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
                             <a
                                 href="https://demos.creative-tim.com/material-tailwind-kit-react/#/login"
@@ -106,6 +119,7 @@ function LeftSidebar() {
                                 Staff List
                             </a>
                         </li>
+                    {/* <Link></Link> */}
                         <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                             <a
                                 href="https://demos.creative-tim.com/material-tailwind-kit-react/#/register"
@@ -117,6 +131,7 @@ function LeftSidebar() {
                                 Department
                             </a>
                         </li>
+                    {/* <Link></Link> */}
                         <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                             <a
                                 href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -128,6 +143,7 @@ function LeftSidebar() {
                                 Leave Application
                             </a>
                         </li>
+                    {/* <Link></Link> */}
                         <li className="px-4 rounded-lg mb-2 hover:bg-gray-300">
                             <a
                                 href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
@@ -139,6 +155,7 @@ function LeftSidebar() {
                                 Allowance & Benefits
                             </a>
                         </li>
+                    {/* <Link></Link> */}
                         <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
                             <a
                                 href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
@@ -152,6 +169,7 @@ function LeftSidebar() {
                         </li>
                         <H6 color="gray">Customer</H6>
                         <div data-trigger="Customer" className="">
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -163,6 +181,7 @@ function LeftSidebar() {
                                     Customer List
                                 </a>
                             </li>
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
@@ -174,6 +193,7 @@ function LeftSidebar() {
                                     Quotation
                                 </a>
                             </li>
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
@@ -185,6 +205,7 @@ function LeftSidebar() {
                                     Purchase Order
                                 </a>
                             </li>
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
@@ -196,6 +217,7 @@ function LeftSidebar() {
                                     Delivery Order
                                 </a>
                             </li>
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
@@ -210,6 +232,7 @@ function LeftSidebar() {
                         </div>
                         <H6 color="gray">Supplier</H6>
                         <div data-trigger="Supplier" className="">
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -225,6 +248,7 @@ function LeftSidebar() {
                         </div>
                         <H6 color="gray">Accounting</H6>
                         <div data-trigger="Accounting" className="">
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -236,6 +260,7 @@ function LeftSidebar() {
                                     Dashboard
                                 </a>
                             </li>
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -247,6 +272,7 @@ function LeftSidebar() {
                                     Cash Statement
                                 </a>
                             </li>
+                    {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
                                     href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
@@ -258,9 +284,10 @@ function LeftSidebar() {
                                     Balance Sheet
                                 </a>
                             </li>
+                     {/* <Link></Link> */}
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
+                                   
                                     target="_blank"
                                     rel="noreferrer"
                                     className="flex items-center gap-4 text-sm font-semibold py-3"
@@ -274,7 +301,7 @@ function LeftSidebar() {
                         
                     </ul>
 
-                    
+                </Router>   
                 </div>
             </div>
         </div>

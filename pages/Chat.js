@@ -1,9 +1,9 @@
 import React , { useState, useEffect, useCallback, useRef } from "react";
 import { IconButton, Divider, TextField, Avatar } from '@material-ui/core'
-import ChatAvatar from "../utilities/ChatAvatar";
+import ChatAvatar from "../components/utilities/ChatAvatar";
 import ScrollBar from 'react-perfect-scrollbar';
-import ChatRecent from "../utilities/ChatRecent";
-import ChatContacts from "../utilities/ChatContacts";
+import ChatRecent from "../components/utilities/ChatRecent";
+import ChatContacts from "../components/utilities/ChatContacts";
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
 import Popover from "@material-tailwind/react/Popover";

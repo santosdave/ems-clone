@@ -1,7 +1,7 @@
 import React from 'react';
-import EcommerceTopBar from "../utilities/EcommerceTopBar";
-import EcommerceSidebar from "../utilities/EcommerceSidebar";
-import EcommerceMainSection from '../utilities/EcommerceMainSection';
+import EcommerceTopBar from "../components/utilities/EcommerceTopBar";
+import EcommerceSidebar from "../components/utilities/EcommerceSidebar";
+import EcommerceMainSection from '../components/utilities/EcommerceMainSection';
 function Ecommerce() {
     return (
         <div className="flex flex-col  ">
