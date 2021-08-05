@@ -1,9 +1,7 @@
 import Icon from '@material-tailwind/react/Icon';
 import H6 from '@material-tailwind/react/Heading6';
-import { Link, Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
+import Link from "next/link";
 function LeftSidebar() {
-   const history = createMemoryHistory();
     return (
         <>
         

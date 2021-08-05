@@ -8,12 +8,10 @@ import Modalfooter from "@material-tailwind/react/Modalfooter";
 import Dropdown from "@material-tailwind/react/Dropdown"
 import DropdownItem from "@material-tailwind/react/DropdownItem"
 import DropdownLink from "@material-tailwind/react/DropdownLink"
-
-import { createMemoryHistory } from 'history';
+import Link from "next/link";
 function Header() {
     /* const [session]=useSession(); */
     const [showModal, setShowModal]= useState(false)
-    const history = createMemoryHistory();
     const modal=(
         <Modal
         size="sm"
