@@ -55,7 +55,7 @@ function Main() {
         },
       ]
     const router = useRouter()
-    currentPath = router.query.route
+    const currentPath = router.query.route
     const findSlugMatchingCmp = ()=>routes.find((cmp) =>{
         return cmp.slug === router.query.route
     } 

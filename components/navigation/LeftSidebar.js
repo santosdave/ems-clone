@@ -23,9 +23,9 @@ function LeftSidebar() {
                 
                 <div className="flex flex-col">
                     < H6 color="gray">Main</H6>
-                <Router history={history}>
+                
                     <ul className="flex-col min-w-full flex list-none">
-                        <Link  to="/">
+                        <Link  href="/home">
                             <li className="px-4 rounded-lg mb-2  hover:bg-gray-300">
                                     <a
                                         target="_blank"
@@ -74,7 +74,7 @@ function LeftSidebar() {
                                     Sent
                                 </a>
                             </li>
-                        <Link to="/chat">
+                        <Link href="/chat">
                             <li className="px-4 rounded-lg mb-2 hover:bg-gray-300 ">
                                     <a
                                         
@@ -299,7 +299,7 @@ function LeftSidebar() {
                         
                     </ul>
 
-                </Router>   
+                  
                 </div>
             </div>
         </div>
